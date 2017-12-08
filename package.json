@@ -1,0 +1,26 @@
+{
+  "name": "knowledge-makers-pi",
+  "version": "1.0.0",
+  "description": "The Knowledge Makers welcome app!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgiobasile/knowledge-makers-pi.git"
+  },
+  "keywords": [
+    "raspberry-pi",
+    "nodejs"
+  ],
+  "author": "Giorgio Basile",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgiobasile/knowledge-makers-pi/issues"
+  },
+  "homepage": "https://github.com/giorgiobasile/knowledge-makers-pi#readme",
+  "dependencies": {
+    "onoff": "^1.1.8"
+  }
+}
