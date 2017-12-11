@@ -19,8 +19,15 @@
   "bugs": {
     "url": "https://github.com/giorgiobasile/knowledge-makers-pi/issues"
   },
-  "homepage": "https://github.com/giorgiobasile/knowledge-makers-pi#readme",
+  "homepage": "https://github.com/giorgiobasile/knowledge-makers-pi#README.md",
   "dependencies": {
-    "onoff": "^1.1.8"
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "minimist": "^1.2.0",
+    "morgan": "^1.9.0",
+    "npm": "^5.6.0",
+    "onoff": "^1.1.8",
+    "path": "^0.12.7",
+    "reload": "^2.2.2"
   }
 }
