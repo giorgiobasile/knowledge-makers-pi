@@ -10,12 +10,16 @@ var app = express()
 
 var publicDir = path.join(__dirname, 'public')
 
+var counter = 0;
+app.engine('.html', require('ejs').__express);
 app.set('port', process.env.PORT || 3000)
+app.set('view engine', 'html')
 app.use(logger('dev'))
 app.use(bodyParser.json()) // Parses json, multi-part (file), url-encoded
-
 app.get('/', function (req, res) {
-  res.sendFile(path.join(publicDir, 'kmimakers.html'))
+  res.render(path.join(publicDir, 'kmimakers.html'), {
+    visitCounter: counter
+  });
 })
 
 var server = http.createServer(app)
@@ -30,7 +34,8 @@ function startServer(){
 }
 
 function reloadBrowser(){
-  console.log("Reload browser!");
+  counter++;
+  console.log("Reload browser, visitor #" + counter);
   reloadServer.reload()
 }
 
@@ -47,7 +52,7 @@ if(argv.pi == true){
       buzzer.writeSync(value);
       console.log('Intruder detected');
       if(value === 1){
-          reloadBrowser();
+        reloadBrowser();
       }
   });
 
